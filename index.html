@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="shortcut icon" href="./assets/img/favicon.png" />
   <title>Ótica Lobão</title>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" 
+  integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
   crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrap col-12">
-    <header class="menu">
+
+    <header class="menu"> <!-- Header -->
       <nav class="navbar">
         <span id="navbar-toggle">
           <i class="fas fa-bars"></i>
@@ -28,7 +30,8 @@
         </ul>
       </nav>
     </header>
-    <main class="hero col-12">
+
+    <main class="hero col-12"> <!-- Hero -->
       <div class="hero-content">
         <h3>A sua</h3>
         <h1>ótica</h1>
@@ -36,7 +39,8 @@
       </div>
     </main>
   </div>
-  <section class="brands col-12">
+
+  <section class="brands col-12"> <!-- Brands -->
     <img src="./assets/img/brands/logo-ray-ban.png" alt="Logo da Ray Ban">
     <img src="./assets/img/brands/logo-dolce-gabbana.png" alt="Logo da Dolce Gabbana">
     <img src="./assets/img/brands/logo-Calvin-klein.png" alt="Logo da Calvin Klein">
@@ -46,7 +50,8 @@
     <img src="./assets/img/brands/logo-police.png" alt="Logo da Police">
     <img src="./assets/img/brands/logo-ana-hickmann.png" alt="Logo da Ana Hickmann">
   </section>
-  <section class="content">
+
+  <section class="content"> <!-- Contents -->
     <img src="./assets/img/home/eyeglasses.jpg" alt="Óculos de Grau">
     <div class="left content-description">
       <h1>Óculos<br>de grau</h1>
@@ -67,7 +72,8 @@
       <button>Conheça o catálogo</button>
     </div>
   </section>
-  <section class="services">
+
+  <section class="services"> <!-- Services -->
     <div class="services-content">
       <h2>Cuidados para visão</h2>
       <h1>alta<br>tecnologia</h1>
@@ -83,7 +89,8 @@
       <img src="./assets/img/partners/varilux-logo.png" alt="Varilux">
     </div>
   </section>
-  <footer class="footer col-12">
+
+  <footer class="footer col-12"> <!-- Footer -->
     <img src="./assets/img/logo/logo-footer.png" alt="Logo Alternativa">
     <div class="menu-footer">
       <nav>
@@ -116,24 +123,6 @@
     </div>
   </footer>
 
-  <script>
-    let mainNav=document.getElementById('main-nav');
-let navbarToggle=document.getElementById('navbar-toggle');
-
-
-
-navbarToggle.addEventListener('click',function(){
-
-    if(this.classList.contains('active')){
-        mainNav.style.display="none";
-        this.classList.remove('active');
-    }
-    else{
-        mainNav.style.display="flex";
-        this.classList.add('active');
-
-    }
-});
-  </script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
