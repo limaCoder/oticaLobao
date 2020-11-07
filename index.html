@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/img/favicon.png" />
   <title>Ótica Lobão</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrap col-12">
-    <header class="menu col-12">
-      <img src="./assets/img/logo.png" alt="Logo Ótica Lobão">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre nós</a></li>
-          <li><a href="#">Produtos</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Parceiros</a></li>
-          <li><a href="#">Contato</a></li>
+    <header class="menu">
+      <nav class="navbar">
+        <span id="navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </span>
+        <img class="logo" src="./assets/img/logo/logo.png" alt="Logo Ótica Lobão">
+        <ul id="main-nav">
+          <li class="nav-links"><a href="index.html">Home</a></li>
+          <li class="nav-links"><a href="#">Sobre nós</a></li>
+          <li class="nav-links"><a href="#">Produtos</a></li>
+          <li class="nav-links"><a href="#">Serviços</a></li>
+          <li class="nav-links"><a href="#">Parceiros</a></li>
+          <li class="nav-links"><a href="#">Contato</a></li>
         </ul>
       </nav>
     </header>
@@ -31,32 +37,32 @@
     </main>
   </div>
   <section class="brands col-12">
-    <img src="./assets/img/logo-ray-ban.png" alt="Ray Ban">
-    <img src="./assets/img/logo-dolce-gabbana.png" alt="Dolce Gabbana">
-    <img src="./assets/img/logo-Calvin-klein.png" alt="Calvin Klein">
-    <img src="./assets/img/logo-carolina-herrera.png" alt="Carolina Herrera">
-    <img src="./assets/img/logo-guess.png" alt="Guess">
-    <img src="./assets/img/logo-oakley.png" alt="Oakley">
-    <img src="./assets/img/logo-police.png" alt="Police">
-    <img src="./assets/img/logo-ana-hickmann.png" alt="Ana Hickmann">
+    <img src="./assets/img/brands/logo-ray-ban.png" alt="Logo da Ray Ban">
+    <img src="./assets/img/brands/logo-dolce-gabbana.png" alt="Logo da Dolce Gabbana">
+    <img src="./assets/img/brands/logo-Calvin-klein.png" alt="Logo da Calvin Klein">
+    <img src="./assets/img/brands/logo-carolina-herrera.png" alt="Logo da Carolina Herrera">
+    <img src="./assets/img/brands/logo-guess.png" alt="Logo da Guess">
+    <img src="./assets/img/brands/logo-oakley.png" alt="Logo da Oakley">
+    <img src="./assets/img/brands/logo-police.png" alt="Logo da Police">
+    <img src="./assets/img/brands/logo-ana-hickmann.png" alt="Logo da Ana Hickmann">
   </section>
   <section class="content">
-    <img src="./assets/img/eyeglasses.jpg" alt="Óculos de Grau">
-    <div class="content-description">
+    <img src="./assets/img/home/eyeglasses.jpg" alt="Óculos de Grau">
+    <div class="left content-description">
       <h1>Óculos<br>de grau</h1>
       <button>Conheça o catálogo</button>
     </div>
   </section>
   <section class="content">
-    <div class="content-description">
+    <div class="right content-description">
       <h1>Óculos<br> de sol</h1>
       <button>Conheça o catálogo</button>
     </div>
-    <img src="./assets/img/sunglasses.jpg" alt="Óculos de Sol">
+    <img src="./assets/img/home/sunglasses.jpg" alt="Óculos de Sol">
   </section>
   <section class="content">
-    <img src="./assets/img/children-glasses.jpg" alt="Óculos Infantis">
-    <div class="content-description">
+    <img src="./assets/img/home/children-glasses.jpg" alt="Óculos Infantis">
+    <div class="left content-description">
       <h1>Óculos<br> infantis</h1>
       <button>Conheça o catálogo</button>
     </div>
@@ -67,18 +73,18 @@
       <h1>alta<br>tecnologia</h1>
       <button>Nossos serviços</button>
     </div>
-    <img src="./assets/img/tech.png" alt="Alta tecnologia">
+    <img src="./assets/img/home/tech.png" alt="Alta tecnologia">
   </section>
   <section class="section-partners col-12">
     <div class="partners">
       <h4>Parceiros</h4>
-      <img src="./assets/img/hoya-logo.png" alt="Hoya">
-      <img src="./assets/img/zeiss-logo.png" alt="Zeiss">
-      <img src="./assets/img/varilux-logo.png" alt="Varilux">
+      <img src="./assets/img/partners/hoya-logo.png" alt="Hoya">
+      <img src="./assets/img/partners/zeiss-logo.png" alt="Zeiss">
+      <img src="./assets/img/partners/varilux-logo.png" alt="Varilux">
     </div>
   </section>
   <footer class="footer col-12">
-    <img src="./assets/img/logo-footer.png" alt="Logo Alternativa">
+    <img src="./assets/img/logo/logo-footer.png" alt="Logo Alternativa">
     <div class="menu-footer">
       <nav>
         <ul>
@@ -109,5 +115,25 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    let mainNav=document.getElementById('main-nav');
+let navbarToggle=document.getElementById('navbar-toggle');
+
+
+
+navbarToggle.addEventListener('click',function(){
+
+    if(this.classList.contains('active')){
+        mainNav.style.display="none";
+        this.classList.remove('active');
+    }
+    else{
+        mainNav.style.display="flex";
+        this.classList.add('active');
+
+    }
+});
+  </script>
 </body>
 </html>
